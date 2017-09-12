@@ -48,7 +48,7 @@ public class BinarySearch {
 
     public static InputStream ReadInput(String filepath){
         try{
-            return new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\"+ filepath);
+            return new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\data\\"+ filepath);
         }catch (FileNotFoundException e) {
             //e.printStackTrace();
         }
