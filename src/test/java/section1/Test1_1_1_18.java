@@ -7,7 +7,7 @@ import edu.princeton.cs.algs4.StdOut;
  * DateTime: 2017/9/12 18:20
  * Description:please write the usage of this file.
  */
-public class Test {
+public class Test1_1_1_18 {
 
     /**
      * 写一个静态方法lg(),接受一个整型参数N,返回不大于log2N的最大整数.不要使用Math库
@@ -181,4 +181,35 @@ public class Test {
         }
     }
 
+    @org.junit.Test
+    public void test1_1_16(){
+        StdOut.println(exR1(6));
+    }
+
+    private static String exR1(int n){
+        if(n<=0) return "";
+        return exR1(n-3) + n + exR1(n-2) + n;
+    }
+
+
+    @org.junit.Test
+    public void test1_1_18(){
+        StdOut.println(mystery1(2,25));
+        StdOut.println(mystery1(3,11));
+
+        StdOut.println(mystery2(2,25));
+        StdOut.println(mystery2(3,11));
+    }
+
+    public static int mystery1(int a,int b){
+        if (b == 0) return 0;
+        if (b % 2 == 0) return mystery1(a+a,b/2);
+        return mystery1(a+a,b/2) + a;
+    }
+
+    public static int mystery2(int a,int b){
+        if (b == 0) return 1;
+        if (b % 2 == 0) return mystery2(a*a,b/2);
+        return mystery2(a*a,b/2) * a;
+    }
 }
