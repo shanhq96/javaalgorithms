@@ -1,4 +1,4 @@
-package section1;
+package section1_1;
 
 import edu.princeton.cs.algs4.StdOut;
 
@@ -10,8 +10,10 @@ import edu.princeton.cs.algs4.StdOut;
 public class Euclid {
 
     public static int gcd(int p, int q) {
-        StdOut.println(p + " " + q);
-        if (q == 0) return p;
+        if (q == 0) {
+            StdOut.println(p);
+            return p;
+        }
         int r = p % q;
         return gcd(q, r);
     }
